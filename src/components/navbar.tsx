@@ -8,7 +8,7 @@ export function Navbar() {
       <Link href="/">Home Link</Link>
       <Link href="/about">About</Link>
       <Link href="/experience">Experience</Link>
-      <Link href="/articles">Articles</Link>
+      <Link href="/blog">Blog</Link>
       <Link href="/projects">Projects</Link>
     </nav>
   );
