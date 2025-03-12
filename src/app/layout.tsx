@@ -22,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistMono.variable} antialiased font-mono`}>
-        <div className="max-w-4xl mx-auto px-4 py-8 min-h-screen flex flex-col gap-4">
+        <div className="max-w-4xl mx-auto px-8 py-8 min-h-screen flex flex-col gap-4">
           <Header />
           <main className="flex flex-auto">{children}</main>
           <Footer />
