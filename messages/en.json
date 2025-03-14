@@ -3,16 +3,10 @@
     "job-title": "Software Engineer",
     "description": "Building amazing software and learning new things every day. Currently working at "
   },
-  "AboutPage": {
-    "title": "About Page",
-    "description": "This is the about page"
-  },
-  "ContactPage": {
-    "title": "Contact Page",
-    "description": "This is the contact page"
-  },
-  "NotFoundPage": {
-    "title": "Not Found Page",
-    "description": "This is the not found page"
+  "Navbar": {
+    "about": "About",
+    "experience": "Experience",
+    "blog": "Blog",
+    "projects": "Projects"
   }
 }

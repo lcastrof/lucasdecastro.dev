@@ -2,7 +2,7 @@ import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
 import { routing } from "@/i18n/routing";
 import type { Metadata } from "next";
-import { hasLocale } from "next-intl";
+import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { Geist_Mono } from "next/font/google";
 import { notFound } from "next/navigation";
 import "./globals.css";
@@ -32,11 +32,13 @@ export default async function RootLayout({
   return (
     <html lang={locale}>
       <body className={`${geistMono.variable} antialiased font-mono`}>
-        <div className="max-w-4xl mx-auto px-8 py-8 min-h-screen flex flex-col gap-4">
-          <Header />
-          <main className="flex flex-auto">{children}</main>
-          <Footer />
-        </div>
+        <NextIntlClientProvider>
+          <div className="max-w-4xl mx-auto px-8 py-8 min-h-screen flex flex-col gap-4">
+            <Header />
+            <main className="flex flex-auto">{children}</main>
+            <Footer />
+          </div>
+        </NextIntlClientProvider>
       </body>
     </html>
   );
