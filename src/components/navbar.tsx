@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import LogoImg from "../../public/assets/images/logo.jpg";
+import { LanguageSelector } from "./language-selector";
 import { NavLink } from "./nav-link";
 
 export function Navbar() {
@@ -17,6 +18,7 @@ export function Navbar() {
         <NavLink href="/blog">Blog</NavLink>
         <NavLink href="/projects">Projects</NavLink>
       </nav>
+      <LanguageSelector />
     </div>
   );
 }
