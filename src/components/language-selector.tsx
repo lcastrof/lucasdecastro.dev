@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
-import { useEffect, useState } from "react";
 import { FaChevronDown } from "react-icons/fa";
 
 const languages = [
@@ -16,34 +15,20 @@ const languages = [
     flag: "/assets/images/flags/br.svg",
     name: "Português",
   },
-];
+] as const;
 
 export function LanguageSelector() {
-  const [selectedLang, setSelectedLang] = useState("en");
-  const router = useRouter();
   const pathname = usePathname();
+  const router = useRouter();
 
-  useEffect(() => {
-    const currentLang = pathname.split("/")[1];
-    if (languages.some((lang) => lang.code === currentLang)) {
-      setSelectedLang(currentLang);
-    }
-  }, [pathname]);
+  const currentLang =
+    languages.find((lang) => pathname.startsWith(`/${lang.code}`))?.code ||
+    "en";
 
-  const switchLanguage = (locale: string) => {
-    setSelectedLang(locale);
-    const segments = pathname.split("/");
-    const isCurrentPathLocalized = languages.some(
-      (lang) => segments[1] === lang.code
-    );
-
-    if (isCurrentPathLocalized) {
-      segments[1] = locale;
-    } else {
-      segments.splice(1, 0, locale);
-    }
-
-    router.push(segments.join("/"));
+  const switchLanguage = (newLocale: string) => {
+    const currentLocale = currentLang;
+    const newPath = pathname.replace(`/${currentLocale}`, `/${newLocale}`);
+    router.push(newPath);
   };
 
   return (
@@ -55,7 +40,7 @@ export function LanguageSelector() {
             text-sm focus:outline-none focus:border-zinc-500 cursor-pointer hover:border-zinc-500 
             transition-colors"
           aria-label="Select language"
-          value={selectedLang}
+          value={currentLang}
           style={{
             WebkitAppearance: "none",
             MozAppearance: "none",
@@ -79,8 +64,8 @@ export function LanguageSelector() {
         <div className="pointer-events-none absolute left-1.5 top-1/2 -translate-y-1/2">
           <Image
             src={
-              languages.find((lang) => lang.code === selectedLang)?.flag ||
-              "/assets/images/flags/us.svg"
+              languages.find((lang) => lang.code === currentLang)?.flag ||
+              languages[0].flag
             }
             alt=""
             width={18}
