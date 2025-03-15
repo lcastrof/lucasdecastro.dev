@@ -16,5 +16,24 @@
     "p3": "This website is my space to share what I learn, document my journey, and contribute to the tech community. I believe in 'learning in public'—writing about experiences, challenges, and insights not only helps me solidify knowledge but also creates opportunities for meaningful discussions and collaboration.",
     "p4": "Beyond coding, I’m always learning—whether it’s diving into new architectural patterns, optimizing performance, or experimenting with personal projects. When I step away from the keyboard, you’ll likely find me working out, playing video games, or spending time with my dogs.",
     "ending-message": "Let’s build something great together!"
-  }
+  },
+  "Experience": {
+    "subtitle": "Here you can find some of my professional experience.",
+    "present": "Present",
+    "downloadCV": "View Full Résumé",
+    "roles": {
+      "currentRole": {
+        "title": "Software Engineer",
+        "description": "I focus on designing and implementing scalable backend solutions, improving system observability, and optimizing performance. I work with microservices architecture, real-time messaging, and distributed systems to enhance product reliability and user experience."
+      },
+      "previousRole": {
+        "title": "Software Engineer",
+        "description": "I contributed to building internal tools, including an ERP system and a real-time collaboration platform. I worked on microservices, developed a CLI tool to streamline processes, and played a key role in system maintenance, testing, and performance improvements."
+      },
+      "firstRole": {
+        "title": "Software Engineer",
+        "description": "I developed and maintained features for various client projects, including a platform for international scientific events with live video calls. I also contributed to documentation and internal knowledge-sharing initiatives while working with cloud services and modern web technologies."
+      }
+    }
+}
 }

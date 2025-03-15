@@ -16,5 +16,24 @@
     "p3": "Este site é meu espaço para compartilhar o que aprendo, documentar minha jornada e contribuir para a comunidade de tecnologia. Acredito em 'aprender em público'—escrever sobre experiências, desafios e insights não apenas me ajuda a solidificar o conhecimento, mas também cria oportunidades para discussões e colaborações significativas.",
     "p4": "Criei este site para compartilhar o que aprendo, documentar minha trajetória e contribuir com a comunidade de tecnologia. Acredito no conceito de 'aprender em público'—escrever sobre desafios e descobertas não só me ajuda a consolidar conhecimentos, mas também abre espaço para discussões e colaborações valiosas.",
     "ending-message": "Vamos construir algo incrível juntos!"
+  },
+  "Experience": {
+    "subtitle": "Aqui você pode encontrar um pouco da minha experiência profissional.",
+    "present": "Atualmente",
+    "downloadCV": "Ver CV Completo",
+    "roles": {
+      "currentRole": {
+        "title": "Engenheiro de Software",
+        "description": "Atuo no desenvolvimento de soluções backend escaláveis, melhorando a observabilidade do sistema e otimizando a performance. Trabalho com arquitetura de microsserviços, mensagens em tempo real e sistemas distribuídos para garantir maior confiabilidade e uma melhor experiência para os usuários."
+      },
+      "previousRole": {
+        "title": "Engenheiro de Software",
+        "description": "Contribuí para o desenvolvimento de ferramentas internas, incluindo um sistema ERP e uma plataforma de colaboração em tempo real. Trabalhei com microsserviços, desenvolvi uma ferramenta CLI para otimizar processos internos e participei ativamente da manutenção, testes e aprimoramento de desempenho dos sistemas."
+      },
+      "firstRole": {
+        "title": "Engenheiro de Software",
+        "description": "Desenvolvi e mantive funcionalidades para diversos projetos de clientes, incluindo uma plataforma de eventos científicos internacionais com transmissões ao vivo. Também colaborei com documentação e compartilhamento de conhecimento interno, trabalhando com serviços em nuvem e tecnologias modernas para web."
+      }
+    }
   }
 }
