@@ -8,5 +8,13 @@
     "experience": "Experiência",
     "blog": "Blog",
     "projects": "Projetos"
+  },
+  "About": {
+    "title": "Sobre Mim",
+    "p1": "Sou um engenheiro de software apaixonado por projetar e desenvolver sistemas escaláveis e de alto desempenho. Meu foco está no desenvolvimento backend, arquitetura de software e microsserviços, além de estar me aprofundando em infraestrutura em nuvem atualmente.",
+    "p2": "Gosto de enfrentar desafios complexos, melhorar a confiabilidade dos sistemas e aprimorar constantemente minhas habilidades. Para mim, desenvolvimento de software vai além do código—é sobre criar soluções escaláveis, de fácil manutenção e que realmente fazem a diferença.",
+    "p3": "Este site é meu espaço para compartilhar o que aprendo, documentar minha jornada e contribuir para a comunidade de tecnologia. Acredito em 'aprender em público'—escrever sobre experiências, desafios e insights não apenas me ajuda a solidificar o conhecimento, mas também cria oportunidades para discussões e colaborações significativas.",
+    "p4": "Criei este site para compartilhar o que aprendo, documentar minha trajetória e contribuir com a comunidade de tecnologia. Acredito no conceito de 'aprender em público'—escrever sobre desafios e descobertas não só me ajuda a consolidar conhecimentos, mas também abre espaço para discussões e colaborações valiosas.",
+    "ending-message": "Vamos construir algo incrível juntos!"
   }
 }
