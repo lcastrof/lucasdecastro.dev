@@ -1,7 +1,7 @@
 {
   "Home": {
     "job-title": "Engenheiro de Software",
-    "description": "Construindo software incrível e aprendendo coisas novas todos os dias. Atualmente trabalhando na "
+    "description": "Construindo software incrível e aprendendo coisas novas todos os dias. Atualmente trabalhando na <a>RD Station</a>."
   },
   "Navbar": {
     "about": "Sobre",
@@ -10,12 +10,14 @@
     "projects": "Projetos"
   },
   "About": {
-    "title": "Olá!",
-    "p1": "Sou um engenheiro de software apaixonado por projetar e desenvolver sistemas escaláveis e de alto desempenho. Meu foco está no desenvolvimento backend, arquitetura de software e microsserviços, além de estar me aprofundando em infraestrutura em nuvem atualmente.",
-    "p2": "Gosto de enfrentar desafios complexos, melhorar a confiabilidade dos sistemas e aprimorar constantemente minhas habilidades. Para mim, desenvolvimento de software vai além do código—é sobre criar soluções escaláveis, de fácil manutenção e que realmente fazem a diferença.",
-    "p3": "Este site é meu espaço para compartilhar o que aprendo, documentar minha jornada e contribuir para a comunidade de tecnologia. Acredito em 'aprender em público'—escrever sobre experiências, desafios e insights não apenas me ajuda a solidificar o conhecimento, mas também cria oportunidades para discussões e colaborações significativas.",
-    "p4": "Criei este site para compartilhar o que aprendo, documentar minha trajetória e contribuir com a comunidade de tecnologia. Acredito no conceito de 'aprender em público'—escrever sobre desafios e descobertas não só me ajuda a consolidar conhecimentos, mas também abre espaço para discussões e colaborações valiosas.",
-    "ending-message": "Vamos construir algo incrível juntos!"
+    "subtitle": "Olá! 👋",
+    "paragraphs": {
+      "p1": "Sou um <bold>engenheiro de software</bold> apaixonado por projetar e desenvolver sistemas <bold>escaláveis</bold> e de <bold>alto desempenho</bold>. Meu foco está no <bold>desenvolvimento backend</bold>, <bold>arquitetura de software</bold> e <bold>microsserviços</bold>, além de estar me aprofundando em <bold>infraestrutura em nuvem</bold> atualmente.",
+      "p2": "Gosto de enfrentar <bold>desafios complexos</bold>, melhorar a <bold>confiabilidade dos sistemas</bold> e aprimorar constantemente minhas habilidades. Para mim, desenvolvimento de software vai além do código—é sobre criar soluções <bold>escaláveis</bold>, de <bold>fácil manutenção</bold> e que realmente fazem a diferença.",
+      "p3": "Criei este site para compartilhar o que aprendo, documentar minha trajetória e contribuir com a comunidade de tecnologia. Acredito no conceito de <bold>aprender em público</bold>—escrever sobre desafios e descobertas não só me ajuda a consolidar conhecimentos, mas também abre espaço para discussões e colaborações valiosas.",
+      "p4": "Fora do mundo da programação, estou sempre aprendendo algo novo. Quando não estou estudando ou desenvolvendo projetos, provavelmente estou treinando, jogando videogame ou aproveitando o tempo com meus cachorros."
+    },
+    "ending-message": "Vamos construir algo incrível juntos! 🚀"
   },
   "Experience": {
     "subtitle": "Aqui você pode encontrar um pouco da minha experiência profissional.",

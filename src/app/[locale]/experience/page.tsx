@@ -1,3 +1,5 @@
+import { PageContainer } from "@/components/page-container";
+import { PageHeader } from "@/components/page-header";
 import { Timeline } from "@/components/timeline";
 import type { ExperienceItem } from "@/types/experience";
 import { useLocale, useTranslations } from "next-intl";
@@ -46,12 +48,8 @@ export default function Experience() {
   const t = useTranslations("Experience");
 
   return (
-    <div className="flex flex-col gap-6 font-[family-name:var(--font-geist-sans)] flex-full">
-      <div>
-        <p className="text-xl max-w-prose text-zinc-400 mt-2">
-          {t("subtitle")}
-        </p>
-      </div>
+    <PageContainer>
+      <PageHeader subtitle={t("subtitle")} />
 
       <Timeline experiences={experiences} />
 
@@ -66,6 +64,6 @@ export default function Experience() {
           {t("downloadCV")}
         </a>
       </div>
-    </div>
+    </PageContainer>
   );
 }

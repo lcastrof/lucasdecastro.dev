@@ -10,11 +10,18 @@ export default function Home() {
         <h2 className="text-4xl text-gray-500">{t("job-title")}</h2>
       </div>
       <p className="text-xl max-w-prose">
-        {t("description")}{" "}
-        <a href="https://www.rdstation.com" className="text-purple-400">
-          RD Station
-        </a>
-        .
+        {t.rich("description", {
+          a: (children) => (
+            <a
+              className="text-blue-500 hover:underline"
+              target="_blank"
+              referrerPolicy="no-referrer"
+              href="https://rdstation.com/"
+            >
+              {children}
+            </a>
+          ),
+        })}
       </p>
     </div>
   );
