@@ -1,11 +1,18 @@
+import { PageContainer } from "@/components/page-container";
+import { PageHeader } from "@/components/page-header";
+import { PostsList } from "@/components/posts-list";
+import { getBlogPosts } from "@/lib/blog";
+import { useTranslations } from "next-intl";
+
 export default function Blog() {
+  const t = useTranslations("Blog");
+  const blogPosts = getBlogPosts();
+
   return (
-    <div className="flex flex-col gap-2 justify-center font-[family-name:var(--font-geist-sans)] flex-full">
-      <h1 className="text-6xl text-gray-200">Blog</h1>
-      <p className="text-xl max-w-prose">
-        Here you can find some of my thoughts about software engineering and
-        other topics.
-      </p>
-    </div>
+    <PageContainer>
+      <PageHeader subtitle={t("subtitle")} />
+
+      <PostsList posts={blogPosts} />
+    </PageContainer>
   );
 }

@@ -9,7 +9,7 @@ export function NavLink({
   children: React.ReactNode;
 }) {
   const path = usePathname();
-  const isSelected = path.endsWith(href);
+  const isSelected = path.includes(href);
 
   return (
     <Link href={href} className="relative group">

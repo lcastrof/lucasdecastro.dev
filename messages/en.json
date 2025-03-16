@@ -37,5 +37,8 @@
         "description": "I developed and maintained features for various client projects, including a platform for international scientific events with live video calls. I also contributed to documentation and internal knowledge-sharing initiatives while working with cloud services and modern web technologies."
       }
     }
-}
+  },
+  "Blog": {
+    "subtitle": "Here you can check some of my thoughts, experiences and learnings."
+  }
 }
