@@ -37,7 +37,6 @@ export function TimelineItem({
       </div>
 
       <Link
-        locale={locale}
         href={experience.companyUrl}
         target="_blank"
         className="flex-1 p-4 rounded-lg border border-transparent transition-all duration-200 

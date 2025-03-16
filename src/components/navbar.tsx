@@ -13,14 +13,14 @@ export function Navbar() {
 
   return (
     <div className="flex justify-between">
-      <Link locale={locale} href="/">
+      <Link locale={locale} href={`/${locale}`}>
         <Image src={LogoImg} alt="Avatar" width={48} height={48} />
       </Link>
       <nav className="flex space-x-4 mx-auto items-center">
-        <NavLink href="/about">{t("about")}</NavLink>
-        <NavLink href="/experience">{t("experience")}</NavLink>
-        <NavLink href="/blog">{t("blog")}</NavLink>
-        <NavLink href="/projects">{t("projects")}</NavLink>
+        <NavLink href={`/${locale}/about`}>{t("about")}</NavLink>
+        <NavLink href={`/${locale}/experience`}>{t("experience")}</NavLink>
+        <NavLink href={`/${locale}/blog`}>{t("blog")}</NavLink>
+        <NavLink href={`/${locale}/projects`}>{t("projects")}</NavLink>
       </nav>
       <LanguageSelector />
     </div>

@@ -46,9 +46,8 @@ export function PostsList({ posts }: PostsListProps) {
             <div className="space-y-1">
               {postsByYear[year].map((post) => (
                 <Link
-                  locale={locale}
                   key={post.slug}
-                  href={`/blog/${post.slug}`}
+                  href={`/${locale}/blog/${post.slug}`}
                   className="group block"
                 >
                   <article className="flex items-start justify-between p-4 rounded-lg transition-all hover:bg-zinc-100 dark:hover:bg-zinc-800/50 border-b border-zinc-200 dark:border-zinc-800">
