@@ -13,8 +13,14 @@ export default async function PostPage({
 
 export function generateStaticParams() {
   const slugs = getBlogPostsSlugs();
+  const locales = ["en", "pt"]; // Add your supported locales
 
-  return slugs.map((slug) => ({ params: { slug } }));
+  return locales.flatMap((locale) =>
+    slugs.map((slug) => ({
+      locale,
+      slug,
+    }))
+  );
 }
 
 export const dynamicParams = false;
