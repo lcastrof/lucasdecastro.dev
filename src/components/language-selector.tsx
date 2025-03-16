@@ -29,8 +29,7 @@ export function LanguageSelector() {
     const currentLocale = currentLang;
     const newPath = pathname.replace(`/${currentLocale}`, `/${newLocale}`);
 
-    // Set cookie when user explicitly changes language
-    document.cookie = `preferred-locale=${newLocale};path=/;max-age=31536000`;
+    document.cookie = `NEXT_LOCALE=${newLocale}; path=/; max-age=31536000`;
 
     router.push(newPath);
   };
