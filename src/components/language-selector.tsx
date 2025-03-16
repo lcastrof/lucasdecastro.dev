@@ -29,8 +29,6 @@ export function LanguageSelector() {
     const currentLocale = currentLang;
     const newPath = pathname.replace(`/${currentLocale}`, `/${newLocale}`);
 
-    document.cookie = `NEXT_LOCALE=${newLocale}; path=/; max-age=31536000`;
-
     router.push(newPath);
   };
 

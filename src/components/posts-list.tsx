@@ -46,6 +46,7 @@ export function PostsList({ posts }: PostsListProps) {
             <div className="space-y-1">
               {postsByYear[year].map((post) => (
                 <Link
+                  locale={locale}
                   key={post.slug}
                   href={`/blog/${post.slug}`}
                   className="group block"

@@ -1,6 +1,6 @@
 "use client";
 
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
 import LogoImg from "../../public/assets/images/logo.jpg";
@@ -8,11 +8,12 @@ import { LanguageSelector } from "./language-selector";
 import { NavLink } from "./nav-link";
 
 export function Navbar() {
+  const locale = useLocale();
   const t = useTranslations("Navbar");
 
   return (
     <div className="flex justify-between">
-      <Link href="/">
+      <Link locale={locale} href="/">
         <Image src={LogoImg} alt="Avatar" width={48} height={48} />
       </Link>
       <nav className="flex space-x-4 mx-auto items-center">
