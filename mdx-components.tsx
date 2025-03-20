@@ -114,7 +114,7 @@ const components = {
     const htmlContent = highlighter.codeToHtml(children as string, {
       lang: language,
       themes: {
-        dark: "dark-plus",
+        dark: "night-owl",
         light: "night-owl",
       },
     });
