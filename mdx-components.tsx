@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { ComponentPropsWithoutRef } from "react";
-import { highlight } from "sugar-high";
+import { getSingletonHighlighter } from "shiki";
 
 type HeadingProps = ComponentPropsWithoutRef<"h1">;
 type ParagraphProps = ComponentPropsWithoutRef<"p">;
@@ -8,6 +8,23 @@ type ListProps = ComponentPropsWithoutRef<"ul">;
 type ListItemProps = ComponentPropsWithoutRef<"li">;
 type AnchorProps = ComponentPropsWithoutRef<"a">;
 type BlockquoteProps = ComponentPropsWithoutRef<"blockquote">;
+
+const highlighter = await getSingletonHighlighter({
+  themes: ["nord", "dracula", "night-owl"],
+  langs: [
+    "typescript",
+    "javascript",
+    "json",
+    "bash",
+    "shell",
+    "css",
+    "html",
+    "markdown",
+    "tsx",
+    "go",
+    "yaml",
+  ],
+});
 
 const components = {
   h1: (props: HeadingProps) => <h1 className="font-medium mb-0" {...props} />,
@@ -75,10 +92,34 @@ const components = {
       </a>
     );
   },
-  code: ({ children, ...props }: ComponentPropsWithoutRef<"code">) => {
-    const codeHTML = highlight(children as string);
-    return <code dangerouslySetInnerHTML={{ __html: codeHTML }} {...props} />;
+  code: ({
+    children,
+    className,
+    ...props
+  }: ComponentPropsWithoutRef<"code">) => {
+    if (!className) {
+      return (
+        <code
+          className="rounded bg-zinc-200 px-1 py-0.5 text-sm font-medium text-zinc-800 dark:bg-zinc-700 dark:text-zinc-200"
+          {...props}
+        >
+          {children}
+        </code>
+      );
+    }
+
+    const language = className.replace("language-", "");
+    const htmlContent = highlighter.codeToHtml(children as string, {
+      lang: language,
+      themes: {
+        dark: "dark-plus",
+        light: "night-owl",
+      },
+    });
+
+    return <div dangerouslySetInnerHTML={{ __html: htmlContent }} />;
   },
+
   Table: ({ data }: { data: { headers: string[]; rows: string[][] } }) => (
     <table>
       <thead>

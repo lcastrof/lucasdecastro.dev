@@ -10,7 +10,7 @@ export default function About() {
       <PageHeader subtitle={t("subtitle")} />
 
       <article className="flex flex-col gap-2 text-lg">
-        {Array.from({ length: 4 }).map((_, i) => (
+        {Array.from({ length: 3 }).map((_, i) => (
           <p key={i}>
             {t.rich(`paragraphs.p${i + 1}`, {
               bold: (children) => <strong>{children}</strong>,
