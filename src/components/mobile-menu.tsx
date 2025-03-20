@@ -12,15 +12,46 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
   const locale = useLocale();
   const t = useTranslations("Navbar");
 
+  // Close menu when clicking the overlay
+  const handleOverlayClick = (e: React.MouseEvent) => {
+    if (e.target === e.currentTarget) {
+      onClose();
+    }
+  };
+
   return (
     <div
+      onClick={handleOverlayClick}
       className={`
-        fixed inset-0 z-40 transform transition-transform duration-300 ease-in-out
-        ${isOpen ? "translate-x-0" : "translate-x-full"}
+        fixed inset-0 w-full h-screen
+        bg-white/80 dark:bg-zinc-900/80 backdrop-blur-lg
+        transform transition-all duration-300 ease-in-out
+        ${isOpen ? "translate-y-0" : "-translate-y-full"}
       `}
     >
-      <div className="absolute inset-0 bg-white/80 dark:bg-zinc-900/80 backdrop-blur-lg" />
-      <nav className="relative flex flex-col items-center justify-center h-full space-y-8">
+      {/* Close button */}
+      <button
+        onClick={onClose}
+        className="absolute top-6 right-6 p-2 text-zinc-800 dark:text-zinc-200"
+        aria-label="Close menu"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="h-6 w-6"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M6 18L18 6M6 6l12 12"
+          />
+        </svg>
+      </button>
+
+      <nav className="flex flex-col items-center justify-center h-full gap-8 text-lg">
         <NavLink href={`/${locale}/about`} onClick={onClose}>
           {t("about")}
         </NavLink>
