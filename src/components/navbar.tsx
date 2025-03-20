@@ -12,17 +12,24 @@ export function Navbar() {
   const t = useTranslations("Navbar");
 
   return (
-    <div className="flex justify-between mb-12">
-      <Link locale={locale} href={`/${locale}`}>
-        <Image src={LogoImg} alt="Avatar" width={48} height={48} />
-      </Link>
-      <nav className="flex space-x-4 mx-auto items-center">
+    <div className="flex flex-col sm:flex-row justify-between mb-12 gap-6 sm:gap-0">
+      <div className="flex justify-between items-center">
+        <Link locale={locale} href={`/${locale}`}>
+          <Image src={LogoImg} alt="Avatar" width={48} height={48} />
+        </Link>
+        <div className="sm:hidden">
+          <LanguageSelector />
+        </div>
+      </div>
+      <nav className="flex sm:space-x-4 sm:mx-auto items-center justify-between">
         <NavLink href={`/${locale}/about`}>{t("about")}</NavLink>
         <NavLink href={`/${locale}/experience`}>{t("experience")}</NavLink>
         <NavLink href={`/${locale}/blog`}>{t("blog")}</NavLink>
         <NavLink href={`/${locale}/projects`}>{t("projects")}</NavLink>
       </nav>
-      <LanguageSelector />
+      <div className="hidden sm:block">
+        <LanguageSelector />
+      </div>
     </div>
   );
 }
