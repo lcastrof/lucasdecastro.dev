@@ -27,16 +27,18 @@ const highlighter = await getSingletonHighlighter({
 });
 
 const components = {
-  h1: (props: HeadingProps) => <h1 className="font-medium mb-0" {...props} />,
+  h1: (props: HeadingProps) => (
+    <h1 className="font-medium mb-2 text-4xl" {...props} />
+  ),
   h2: (props: HeadingProps) => (
     <h2
-      className="text-gray-800 dark:text-zinc-200 font-medium mt-8 mb-3"
+      className="text-gray-800 dark:text-zinc-200 font-medium mt-8 mb-3 text-2xl"
       {...props}
     />
   ),
   h3: (props: HeadingProps) => (
     <h3
-      className="text-gray-800 dark:text-zinc-200 font-medium mt-8 mb-3"
+      className="text-gray-800 dark:text-zinc-200 font-medium mt-8 mb-3 text-xl"
       {...props}
     />
   ),

@@ -58,7 +58,7 @@ export default function Experience() {
           href={`/resume-${locale}.pdf`}
           target="_blank"
           referrerPolicy="no-referrer"
-          className="px-4 py-2 text-sm text-zinc-200 border border-zinc-700 rounded-lg
+          className="px-4 py-2 text-sm lg:text-base text-zinc-200 border border-zinc-700 rounded-lg
             hover:bg-zinc-800 transition-colors"
         >
           {t("downloadCV")}

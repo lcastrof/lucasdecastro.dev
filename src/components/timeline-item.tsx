@@ -45,7 +45,7 @@ export function TimelineItem({
         <h3 className="text-xl font-medium text-zinc-200">
           {t(`roles.${experience.translationKey}.title`)}
         </h3>
-        <p className="text-sm text-zinc-400">
+        <p className="text-sm lg:text-base text-zinc-400">
           {experience.company} • {formatDate(experience.startDate, locale)} -{" "}
           {experience.endDate === "Present"
             ? t("present")
