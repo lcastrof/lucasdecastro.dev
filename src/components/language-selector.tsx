@@ -37,9 +37,9 @@ export function LanguageSelector() {
       <div className="relative flex items-center group">
         <select
           onChange={(e) => switchLanguage(e.target.value)}
-          className="appearance-none bg-transparent border-b border-zinc-700 pr-6 pl-8 py-1.5
+          className="appearance-none bg-transparent border-b border-zinc-700 md:pr-6 pl-8 py-1.5
             text-sm focus:outline-none focus:border-zinc-500 cursor-pointer hover:border-zinc-500 
-            transition-colors"
+            transition-colors max-w-0 pr-3 md:max-w-full"
           aria-label="Select language"
           value={currentLang}
           style={{

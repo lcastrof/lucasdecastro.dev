@@ -30,7 +30,7 @@ export function Navbar() {
         transition-all duration-300 ease-in-out
         ${
           isScrolled
-            ? "bg-white/30 backdrop-blur-lg shadow-lg dark:bg-zinc-900/30 h-16"
+            ? "bg-white/10 backdrop-blur-sm shadow-lg dark:bg-zinc-900/30 h-16"
             : "bg-transparent h-20"
         }
       `}
@@ -51,7 +51,7 @@ export function Navbar() {
             className="transition-all duration-300 ease-in-out rounded-full"
           />
         </Link>
-        <nav className="flex gap-4 mx-auto items-center">
+        <nav className="flex gap-3 md:gap-4 ml-auto mr-3 md:mx-auto items-center">
           <NavLink href={`/${locale}/about`}>{t("about")}</NavLink>
           <NavLink href={`/${locale}/experience`}>{t("experience")}</NavLink>
           <NavLink href={`/${locale}/blog`}>{t("blog")}</NavLink>
