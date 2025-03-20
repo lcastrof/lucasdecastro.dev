@@ -50,7 +50,7 @@ export default async function RootLayout({
         <NextIntlClientProvider>
           <div className="max-w-4xl mx-auto px-8 py-8 min-h-screen flex flex-col gap-4 lg:text-lg">
             <Header />
-            <main className="flex flex-auto">{children} </main>
+            <main className="flex flex-auto pt-22">{children} </main>
             <Footer />
           </div>
         </NextIntlClientProvider>

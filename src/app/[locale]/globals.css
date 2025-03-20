@@ -127,6 +127,18 @@ table {
   view-transition-name: lucas;
 }
 
+.glass-gradient {
+  background: linear-gradient(180deg,
+      rgba(255, 255, 255, 0.15),
+      rgba(255, 255, 255, 0.05));
+}
+
+.dark .glass-gradient {
+  background: linear-gradient(180deg,
+      rgba(0, 0, 0, 0.15),
+      rgba(0, 0, 0, 0.05));
+}
+
 ::view-transition-old(lucas) {
   animation: fade-out 0.8s ease-in-out;
 }
