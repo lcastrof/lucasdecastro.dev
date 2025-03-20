@@ -10,7 +10,7 @@ const experiences: ExperienceItem[] = [
     translationKey: "currentRole",
     company: "RD Station",
     companyUrl: "https://rdstation.com",
-    startDate: "2024-04-02",
+    startDate: "2024-09-02",
     endDate: "Present",
     technologies: [
       "Node",

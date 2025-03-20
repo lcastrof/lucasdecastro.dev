@@ -32,13 +32,13 @@ const components = {
   ),
   h2: (props: HeadingProps) => (
     <h2
-      className="text-gray-800 dark:text-zinc-200 font-medium mt-8 mb-3 text-2xl"
+      className="text-gray-800 dark:text-zinc-200 font-medium mt-8 mb-4 text-2xl"
       {...props}
     />
   ),
   h3: (props: HeadingProps) => (
     <h3
-      className="text-gray-800 dark:text-zinc-200 font-medium mt-8 mb-3 text-xl"
+      className="text-gray-800 dark:text-zinc-200 font-medium mt-8 mb-4 text-xl"
       {...props}
     />
   ),
