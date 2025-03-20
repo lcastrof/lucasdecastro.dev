@@ -28,6 +28,10 @@ body {
   text-rendering: optimizeLegibility;
 }
 
+p {
+  line-height: 1.5;
+}
+
 h1,
 h2,
 h3,
@@ -35,7 +39,7 @@ h4 {
   text-wrap: balance;
 }
 
-pre {
+pre.shiki {
   background-color: #16161e;
   border-radius: 0.5rem;
   overflow-x: auto;
@@ -45,12 +49,16 @@ pre {
 }
 
 pre::-webkit-scrollbar {
-  display: none;
+  height: 8px;
 }
 
-pre {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+pre::-webkit-scrollbar-track {
+  background: #282c34;
+}
+
+pre::-webkit-scrollbar-thumb {
+  background: #4b5263;
+  border-radius: 4px;
 }
 
 code {

@@ -9,7 +9,7 @@ const links = [
 
 export function Footer() {
   return (
-    <footer className="flex w-full justify-center space-x-4">
+    <footer className="flex w-full justify-center space-x-4 mt-9">
       {links.map(({ href, Icon }) => (
         <IconLink key={href} href={href}>
           <Icon size={24} />

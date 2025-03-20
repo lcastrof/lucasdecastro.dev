@@ -48,7 +48,7 @@ export default async function RootLayout({
         className={`${geistMono.variable} ${bungeeShade.variable} antialiased font-mono`}
       >
         <NextIntlClientProvider>
-          <div className="max-w-4xl mx-auto px-8 py-8 min-h-screen flex flex-col gap-4">
+          <div className="max-w-4xl mx-auto px-8 py-8 min-h-screen flex flex-col gap-4 lg:text-lg">
             <Header />
             <main className="flex flex-auto">{children} </main>
             <Footer />

@@ -52,10 +52,10 @@ export function PostsList({ posts }: PostsListProps) {
                 >
                   <article className="flex items-start justify-between p-4 rounded-lg transition-all hover:bg-zinc-100 dark:hover:bg-zinc-800/50 border-b border-zinc-200 dark:border-zinc-800">
                     <div className="space-y-1.5 pr-8">
-                      <h3 className="font-medium text-zinc-800 dark:text-zinc-200 group-hover:text-blue-500 transition-colors">
+                      <h3 className="font-medium text-lg lg:text-xl text-zinc-800 dark:text-zinc-200 group-hover:text-blue-500 transition-colors">
                         {post.metadata?.title}
                       </h3>
-                      <p className="text-sm text-zinc-600 dark:text-zinc-400 line-clamp-2">
+                      <p className="text-sm lg:text-base text-zinc-600 dark:text-zinc-400 line-clamp-2">
                         {post.metadata?.description}
                       </p>
                     </div>
