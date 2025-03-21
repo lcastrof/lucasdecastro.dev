@@ -40,5 +40,16 @@
   "Blog": {
     "subtitle": "Aqui você pode conferir alguns dos meus pensamentos, experiências e aprendizados.",
     "minutes-to-read": "min de leitura"
+  },
+  "Projects": {
+    "subtitle": "Aqui você pode encontrar alguns dos meus projetos pessoais.",
+    "key-achievements": "Principais Objetivos",
+    "projects": {
+      "personal-website": "Site Pessoal",
+      "personal-website-description": "Meu site pessoal construído com Next.js, TypeScript e Tailwind CSS. Possui blog, showcase de projetos e modo escuro.",
+      "personal-website-achievement-1": "Implementação de i18n para múltiplos idiomas",
+      "personal-website-achievement-2": "Componentes MDX customizados",
+      "personal-website-achievement-3": "Pontuação 100 em Performance no Lighthouse"
+    }
   }
 }
