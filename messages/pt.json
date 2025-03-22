@@ -46,7 +46,7 @@
     "key-achievements": "Principais Objetivos",
     "projects": {
       "personal-website": "Site Pessoal",
-      "personal-website-description": "Meu site pessoal construído com Next.js, TypeScript e Tailwind CSS. Possui blog, showcase de projetos e modo escuro.",
+      "personal-website-description": "Meu site pessoal construído com Next.js, TypeScript e Tailwind CSS. Possui blog, showcase de projetos e detalhes profissionais.",
       "personal-website-achievement-1": "Implementação de i18n para múltiplos idiomas",
       "personal-website-achievement-2": "Componentes MDX customizados",
       "personal-website-achievement-3": "Pontuação 100 em Performance no Lighthouse"
