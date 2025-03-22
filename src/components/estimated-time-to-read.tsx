@@ -10,10 +10,11 @@ const estimatedTimeToRead = (wordCount: number) => {
 export function EstimatedTimeToRead({ slug }: { slug: string }) {
   const t = useTranslations("Blog");
   const wordCount = countBlogPostWords(slug);
+  const minutes = estimatedTimeToRead(wordCount);
 
   return (
-    <span className="text-gray-500 text-sm">
-      ~ {estimatedTimeToRead(wordCount)} {t("minutes-to-read")}
+    <span>
+      {minutes} {t("minutes-to-read")}
     </span>
   );
 }
