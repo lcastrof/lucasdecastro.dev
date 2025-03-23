@@ -13,7 +13,7 @@ export default function Home() {
         {t.rich("description", {
           a: (children) => (
             <a
-              className="text-blue-500 hover:underline"
+              className="text-sky-500 hover:underline"
               target="_blank"
               referrerPolicy="no-referrer"
               href="https://rdstation.com/"
