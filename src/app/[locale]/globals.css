@@ -3,6 +3,18 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  /* Base colors */
+    --color-zinc-800: oklch(32.7% 0.004 255.094);
+    --color-zinc-400: oklch(66.1% 0.004 255.094);
+  
+    /* Accent colors */
+    --color-sky-500: oklch(68.5% 0.169 237.323);
+    --color-sky-400: oklch(73% 0.15 237.323);
+  
+    /* Semantic colors with opacity variants */
+    --color-accent: var(--color-sky-500);
+    --color-accent-muted: color-mix(in oklab, var(--color-sky-500) 20%, transparent);
+    --color-accent-hover: color-mix(in oklab, var(--color-sky-500) 30%, transparent);
 }
 
 @theme inline {

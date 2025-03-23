@@ -3,6 +3,7 @@
 import { ExperienceItem } from "@/types/experience";
 import { useLocale, useTranslations } from "next-intl";
 import Link from "next/link";
+import { Tag } from "./tag";
 
 interface TimelineItemProps {
   experience: ExperienceItem;
@@ -27,7 +28,6 @@ export function TimelineItem({
 
   return (
     <div className="flex gap-4">
-      {/* Adjust the dot container to align with title */}
       <div className="relative z-10 mt-[22px]">
         <div
           className={`w-4 h-4 rounded-full transition-colors ${
@@ -56,12 +56,7 @@ export function TimelineItem({
         </p>
         <div className="flex flex-wrap gap-2 mt-3">
           {experience.technologies.map((tech) => (
-            <span
-              key={tech}
-              className="px-2 py-1 text-xs rounded-full bg-zinc-800 text-zinc-300"
-            >
-              {tech}
-            </span>
+            <Tag key={tech}>{tech}</Tag>
           ))}
         </div>
       </Link>

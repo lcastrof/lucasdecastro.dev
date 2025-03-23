@@ -12,7 +12,7 @@ export default function Projects() {
       <PageHeader subtitle={t("subtitle")} />
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        {projects.concat(projects).map((project) => (
+        {projects.map((project) => (
           <ProjectCard key={project.id} project={project} />
         ))}
       </div>
