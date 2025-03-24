@@ -1,4 +1,20 @@
+import { generatePageMetadata } from "@/lib/metadata";
+import { Metadata } from "next";
 import { useTranslations } from "next-intl";
+
+type Props = {
+  params: Promise<{ locale: string }>;
+};
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  return generatePageMetadata({
+    translationNamespace: "home",
+    locale: locale,
+    path: "",
+    type: "home",
+  });
+}
 
 export default function Home() {
   const t = useTranslations("Home");
