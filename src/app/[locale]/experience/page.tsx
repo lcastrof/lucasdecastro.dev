@@ -5,14 +5,15 @@ import { generatePageMetadata } from "@/lib/metadata";
 import { Metadata } from "next";
 import { useLocale, useTranslations } from "next-intl";
 
-export async function generateMetadata({
-  params: { lang },
-}: {
-  params: { lang: string };
-}): Promise<Metadata> {
+type Props = {
+  params: Promise<{ locale: string }>;
+};
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
   return generatePageMetadata({
     translationNamespace: "experience",
-    locale: lang,
+    locale,
     path: "/experience",
     ogTitle: "Experience",
   });

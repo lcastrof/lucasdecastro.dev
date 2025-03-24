@@ -1,22 +1,19 @@
 import { getBlogPostsSlugs, getPost } from "@/lib/blog";
 import { Metadata } from "next";
 
-interface Props {
-  params: {
-    slug: string;
-    lang: string;
-  };
-}
+type Props = {
+  params: Promise<{ locale: string; slug: string }>;
+};
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { slug, lang } = await params;
+  const { locale, slug } = await params;
   const post = await getPost(slug);
 
   return {
     title: post.title,
     description: post.description,
     alternates: {
-      canonical: `/${lang}/blog/${slug}`,
+      canonical: `/${locale}/blog/${slug}`,
       languages: {
         en: `/en/blog/${slug}`,
         pt: `/pt/blog/${slug}`,
@@ -28,8 +25,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       type: "article",
       publishedTime: post.date,
       authors: ["Lucas de Castro"],
-      url: `https://lucasdecastro.dev/${lang}/blog/${slug}`,
-      locale: lang === "en" ? "en_US" : "pt_BR",
+      url: `https://lucasdecastro.dev/${locale}/blog/${slug}`,
+      locale: locale === "en" ? "en_US" : "pt_BR",
       siteName: "Lucas de Castro",
       images: [
         {

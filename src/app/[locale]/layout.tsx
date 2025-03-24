@@ -7,16 +7,17 @@ import { Geist_Mono } from "next/font/google";
 import { notFound } from "next/navigation";
 import "./globals.css";
 
+type Params = Promise<{ locale: string }>;
+
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
 
-export async function generateMetadata({
-  params: { lang },
-}: {
-  params: { lang: string };
+export async function generateMetadata(props: {
+  params: Params;
 }): Promise<Metadata> {
+  const { locale } = await props.params;
   return {
     metadataBase: new URL("https://lucasdecastro.dev"),
     title: {
@@ -26,8 +27,8 @@ export async function generateMetadata({
     description: "Software Engineer, transforming bugs into features.",
     openGraph: {
       type: "website",
-      locale: lang === "en" ? "en_US" : "pt_BR",
-      url: `https://lucasdecastro.dev/${lang}`,
+      locale: locale === "en" ? "en_US" : "pt_BR",
+      url: `https://lucasdecastro.dev/${locale}`,
       siteName: "Lucas de Castro",
       images: [
         {
@@ -43,7 +44,7 @@ export async function generateMetadata({
       follow: true,
     },
     alternates: {
-      canonical: `/${lang}`,
+      canonical: `/${locale}`,
       languages: {
         en: "/en",
         pt: "/pt",
