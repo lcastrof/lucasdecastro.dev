@@ -73,5 +73,9 @@
       "title": "Lucas de Castro",
       "description": "Engenheiro de Software, transformando bugs em features"
     }
+  },
+  "NotFound": {
+    "message": "A página que você está procurando pode ter sido removida ou está temporariamente indisponível",
+    "back-home": "Voltar para o início"
   }
 }
