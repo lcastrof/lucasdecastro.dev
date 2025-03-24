@@ -3,19 +3,13 @@ import { Header } from "@/components/header";
 import { routing } from "@/i18n/routing";
 import type { Metadata } from "next";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
-import { Bungee_Shade, Geist_Mono } from "next/font/google";
+import { Geist_Mono } from "next/font/google";
 import { notFound } from "next/navigation";
 import "./globals.css";
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
-});
-
-const bungeeShade = Bungee_Shade({
-  variable: "--font-bungee-shade",
-  subsets: ["latin"],
-  weight: "400",
 });
 
 export async function generateMetadata({
@@ -73,9 +67,7 @@ export default async function RootLayout({
 
   return (
     <html lang={locale}>
-      <body
-        className={`${geistMono.variable} ${bungeeShade.variable} antialiased font-mono`}
-      >
+      <body className={`${geistMono.variable}  antialiased font-mono`}>
         <NextIntlClientProvider>
           <div className="max-w-4xl mx-auto px-8 py-8 min-h-screen flex flex-col gap-4 lg:text-lg">
             <Header />
