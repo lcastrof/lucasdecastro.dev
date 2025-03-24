@@ -1,7 +1,22 @@
 import { PageContainer } from "@/components/page-container";
 import { PageHeader } from "@/components/page-header";
 import { Timeline } from "@/components/timeline";
+import { generatePageMetadata } from "@/lib/metadata";
+import { Metadata } from "next";
 import { useLocale, useTranslations } from "next-intl";
+
+export async function generateMetadata({
+  params: { locale },
+}: {
+  params: { locale: string };
+}): Promise<Metadata> {
+  return generatePageMetadata({
+    title: "Experience",
+    description: "My professional experience in software development.",
+    locale,
+    path: "/experience",
+  });
+}
 
 export default function Experience() {
   const locale = useLocale();

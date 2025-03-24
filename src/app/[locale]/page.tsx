@@ -1,4 +1,19 @@
+import { generatePageMetadata } from "@/lib/metadata";
+import { Metadata } from "next";
 import { useTranslations } from "next-intl";
+
+export async function generateMetadata({
+  params: { locale },
+}: {
+  params: { locale: string };
+}): Promise<Metadata> {
+  return generatePageMetadata({
+    title: "Lucas de Castro",
+    description: "Software Engineer, transforming bugs into features",
+    locale,
+    path: "",
+  });
+}
 
 export default function Home() {
   const t = useTranslations("Home");

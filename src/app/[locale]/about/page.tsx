@@ -1,6 +1,22 @@
 import { PageContainer } from "@/components/page-container";
 import { PageHeader } from "@/components/page-header";
+import { generatePageMetadata } from "@/lib/metadata";
+import { Metadata } from "next";
 import { useTranslations } from "next-intl";
+
+export async function generateMetadata({
+  params: { locale },
+}: {
+  params: { locale: string };
+}): Promise<Metadata> {
+  return generatePageMetadata({
+    title: "About",
+    description:
+      "Learn more about me, my background, and experience in software development",
+    locale,
+    path: "/about",
+  });
+}
 
 export default function About() {
   const t = useTranslations("About");

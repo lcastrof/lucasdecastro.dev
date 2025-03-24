@@ -1,4 +1,37 @@
-import { getBlogPostsSlugs } from "@/lib/blog";
+import { getBlogPostsSlugs, getPost } from "@/lib/blog";
+import { Metadata } from "next";
+
+interface Props {
+  params: {
+    slug: string;
+    lang: string;
+  };
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { slug, lang } = await params;
+  const post = await getPost(slug);
+
+  return {
+    title: post.title,
+    description: post.description,
+    alternates: {
+      canonical: `/${lang}/blog/${slug}`,
+      languages: {
+        en: `/en/blog/${slug}`,
+        pt: `/pt/blog/${slug}`,
+      },
+    },
+    openGraph: {
+      title: post.title,
+      description: post.description,
+      type: "article",
+      publishedTime: post.date,
+      authors: ["Lucas de Castro"],
+      url: `/${lang}/blog/${slug}`,
+    },
+  };
+}
 
 export default async function PostPage({
   params,

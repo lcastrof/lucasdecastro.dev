@@ -18,17 +18,46 @@ const bungeeShade = Bungee_Shade({
   weight: "400",
 });
 
-export const metadata: Metadata = {
-  metadataBase: new URL("https://lucasdecastro.dev"),
-  alternates: {
-    canonical: "/",
-  },
-  title: {
-    default: "Lucas de Castro",
-    template: "%s | Lucas de Castro",
-  },
-  description: "Software engineer, turning bugs into features.",
-};
+export async function generateMetadata({
+  params: { lang },
+}: {
+  params: { lang: string };
+}): Promise<Metadata> {
+  return {
+    metadataBase: new URL("https://lucasdecastro.dev"),
+    title: {
+      default: "Lucas de Castro",
+      template: "%s | Lucas de Castro",
+    },
+    description: "Software Engineer, transforming bugs into features.",
+    openGraph: {
+      type: "website",
+      locale: lang === "en" ? "en_US" : "pt_BR",
+      url: `https://lucasdecastro.dev/${lang}`,
+      siteName: "Lucas de Castro",
+      images: [
+        {
+          url: "/og-image.png",
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      creator: "@lcastrof_",
+    },
+    robots: {
+      index: true,
+      follow: true,
+    },
+    alternates: {
+      canonical: `/${lang}`,
+      languages: {
+        en: "/en",
+        pt: "/pt",
+      },
+    },
+  };
+}
 
 export default async function RootLayout({
   children,

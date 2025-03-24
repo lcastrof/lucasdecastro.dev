@@ -7,32 +7,36 @@ async function getPostSlugs(dir: string) {
     withFileTypes: true,
   });
   return entries
-    .filter((entry) => entry.isFile() && entry.name === "page.mdx")
+    .filter((entry) => entry.isFile() && entry.name.endsWith(".mdx"))
     .map((entry) => {
       const relativePath = path.relative(
         dir,
         path.join(entry.parentPath, entry.name)
       );
-      return path.dirname(relativePath);
-    })
-    .map((slug) => slug.replace(/\\/g, "/"));
+      return path.basename(relativePath, ".mdx");
+    });
 }
 
+const locales = ["en", "pt"];
+
 export default async function sitemap() {
-  const postsDirectory = path.join(process.cwd(), "app", "n");
+  const postsDirectory = path.join(process.cwd(), "src", "posts");
   const slugs = await getPostSlugs(postsDirectory);
 
-  const posts = slugs.map((slug) => ({
-    url: `https://lucasdecastro.dev/blog/${slug}`,
-    lastModified: new Date().toISOString(),
-  }));
-
-  const routes = ["", "/about", "/blog", "/experience", "/projects"].map(
-    (route) => ({
-      url: `https://lucasdecastro.dev${route}`,
+  const posts = locales.flatMap((locale) =>
+    slugs.map((slug) => ({
+      url: `https://lucasdecastro.dev/${locale}/blog/${slug}`,
       lastModified: new Date().toISOString(),
-    })
+    }))
   );
 
-  return [...routes, ...posts];
+  const routes = ["", "/about", "/blog", "/experience", "/projects"];
+  const localizedRoutes = locales.flatMap((locale) =>
+    routes.map((route) => ({
+      url: `https://lucasdecastro.dev/${locale}${route}`,
+      lastModified: new Date().toISOString(),
+    }))
+  );
+
+  return [...localizedRoutes, ...posts];
 }
