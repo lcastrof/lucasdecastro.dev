@@ -8,8 +8,7 @@ export async function generateMetadata({
   params: { locale: string };
 }): Promise<Metadata> {
   return generatePageMetadata({
-    title: "Lucas de Castro",
-    description: "Software Engineer, transforming bugs into features",
+    translationNamespace: "home",
     locale,
     path: "",
   });

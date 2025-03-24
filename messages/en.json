@@ -53,7 +53,6 @@
     }
   },
   "metadata": {
-    "description": "Software Engineer, transforming bugs into features",
     "blog": {
       "title": "Blog",
       "description": "Articles about software development, career, and technical content"
@@ -69,6 +68,10 @@
     "projects": {
       "title": "Projects",
       "description": "A showcase of my personal and open source projects"
+    },
+    "home": {
+      "title": "Lucas de Castro",
+      "description": "Software Engineer, transforming bugs into features"
     }
   }
 }
