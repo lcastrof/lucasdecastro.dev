@@ -73,5 +73,9 @@
       "title": "Lucas de Castro",
       "description": "Software Engineer, transforming bugs into features"
     }
+  },
+  "NotFound": {
+    "message": "The page you are looking for might have been removed or is temporarily unavailable",
+    "back-home": "Back to Home"
   }
 }
