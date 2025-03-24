@@ -7,13 +7,13 @@ import { Metadata } from "next";
 import { useTranslations } from "next-intl";
 
 export async function generateMetadata({
-  params: { locale },
+  params: { lang },
 }: {
-  params: { locale: string };
+  params: { lang: string };
 }): Promise<Metadata> {
   return generatePageMetadata({
     translationNamespace: "projects",
-    locale,
+    locale: lang,
     path: "/projects",
     ogTitle: "Projects",
   });
