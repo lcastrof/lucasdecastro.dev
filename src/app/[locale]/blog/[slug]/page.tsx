@@ -28,7 +28,21 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       type: "article",
       publishedTime: post.date,
       authors: ["Lucas de Castro"],
-      url: `/${lang}/blog/${slug}`,
+      url: `https://lucasdecastro.dev/${lang}/blog/${slug}`,
+      locale: lang === "en" ? "en_US" : "pt_BR",
+      siteName: "Lucas de Castro",
+      images: [
+        {
+          url: `https://lucasdecastro.dev/og?type=blog&title=${encodeURIComponent(
+            post.title || ""
+          )}`,
+          width: 1200,
+          height: 600,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
     },
   };
 }

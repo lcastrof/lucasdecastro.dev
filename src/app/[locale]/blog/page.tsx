@@ -15,6 +15,7 @@ export async function generateMetadata({
     translationNamespace: "blog",
     locale,
     path: "/blog",
+    ogTitle: "Blog",
   });
 }
 

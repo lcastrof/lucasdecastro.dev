@@ -13,6 +13,7 @@ export async function generateMetadata({
     translationNamespace: "about",
     locale,
     path: "/about",
+    ogTitle: "About",
   });
 }
 

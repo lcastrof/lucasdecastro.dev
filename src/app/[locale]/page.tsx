@@ -11,6 +11,7 @@ export async function generateMetadata({
     translationNamespace: "home",
     locale,
     path: "",
+    type: "home",
   });
 }
 
