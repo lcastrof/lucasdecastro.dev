@@ -51,5 +51,24 @@
       "personal-website-achievement-2": "Built custom MDX components",
       "personal-website-achievement-3": "Achieved 100 Performance score on Lighthouse"
     }
+  },
+  "metadata": {
+    "description": "Software Engineer, transforming bugs into features",
+    "blog": {
+      "title": "Blog",
+      "description": "Articles about software development, career, and technical content"
+    },
+    "about": {
+      "title": "About",
+      "description": "Learn more about me, my background, and experience in software development"
+    },
+    "experience": {
+      "title": "Experience",
+      "description": "My professional experience in software development"
+    },
+    "projects": {
+      "title": "Projects",
+      "description": "A showcase of my personal and open source projects"
+    }
   }
 }

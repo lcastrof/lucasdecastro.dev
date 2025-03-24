@@ -51,5 +51,24 @@
       "personal-website-achievement-2": "Componentes MDX customizados",
       "personal-website-achievement-3": "Pontuação 100 em Performance no Lighthouse"
     }
+  },
+  "metadata": {
+    "description": "Engenheiro de Software, transformando bugs em features",
+    "blog": {
+      "title": "Blog",
+      "description": "Artigos sobre desenvolvimento de software, carreira e conteúdo técnico"
+    },
+    "about": {
+      "title": "Sobre",
+      "description": "Saiba mais sobre mim, minha trajetória e experiência em desenvolvimento de software"
+    },
+    "experience": {
+      "title": "Experiência",
+      "description": "Minha experiência profissional em desenvolvimento de software"
+    },
+    "projects": {
+      "title": "Projetos",
+      "description": "Uma vitrine dos meus projetos pessoais e open source"
+    }
   }
 }

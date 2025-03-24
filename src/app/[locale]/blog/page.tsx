@@ -12,9 +12,7 @@ export async function generateMetadata({
   params: { locale: string };
 }): Promise<Metadata> {
   return generatePageMetadata({
-    title: "Blog",
-    description:
-      "Articles about software development, career, and technical content",
+    translationNamespace: "blog",
     locale,
     path: "/blog",
   });

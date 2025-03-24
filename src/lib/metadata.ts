@@ -1,21 +1,22 @@
 import { Metadata } from "next";
+import { getTranslations } from "next-intl/server";
 
-interface GenerateMetadataProps {
-  title: string;
-  description: string;
+interface GeneratePageMetadataProps {
+  translationNamespace: string;
   locale: string;
   path: string;
 }
 
-export function generatePageMetadata({
-  title,
-  description,
+export async function generatePageMetadata({
+  translationNamespace,
   locale,
   path,
-}: GenerateMetadataProps): Metadata {
+}: GeneratePageMetadataProps): Promise<Metadata> {
+  const t = await getTranslations(`metadata.${translationNamespace}`);
+
   return {
-    title,
-    description,
+    title: t("title"),
+    description: t("description"),
     alternates: {
       canonical: `/${locale}${path}`,
       languages: {
@@ -24,8 +25,8 @@ export function generatePageMetadata({
       },
     },
     openGraph: {
-      title,
-      description,
+      title: t("title"),
+      description: t("description"),
       url: `/${locale}${path}`,
     },
   };
