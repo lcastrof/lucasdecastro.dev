@@ -44,10 +44,10 @@ export async function GET(request: Request) {
 
           {type !== "home" && (
             <img
-              src={`https://lucasdecastro.dev/assets/images/logo.jpg`}
+              src={`https://lucasdecastro.dev/assets/images/logo.svg`}
               style={{
-                width: "80px",
-                height: "80px",
+                width: "64px",
+                height: "64px",
                 borderRadius: "8px",
                 position: "absolute",
                 bottom: "40px",
@@ -80,7 +80,7 @@ export async function GET(request: Request) {
 
             <h1
               style={{
-                fontSize: type === "home" ? 72 : 48,
+                fontSize: 56,
                 color: "#fff",
                 margin: 0,
                 lineHeight: 1.2,
@@ -99,7 +99,7 @@ export async function GET(request: Request) {
             >
               {type === "home" ? (
                 <img
-                  src={`https://lucasdecastro.dev/assets/images/logo.jpg`}
+                  src={`https://lucasdecastro.dev/assets/images/logo.svg`}
                   style={{
                     width: "200px",
                     height: "200px",

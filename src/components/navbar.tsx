@@ -3,7 +3,7 @@
 import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
-import LogoImg from "../../public/assets/images/logo.jpg";
+import LogoImg from "../../public/assets/images/logo.svg";
 import { LanguageSelector } from "./language-selector";
 import { NavLink } from "./nav-link";
 
