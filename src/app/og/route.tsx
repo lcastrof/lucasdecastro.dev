@@ -1,7 +1,25 @@
-import { loadGoogleFont } from "@/lib/fonts";
 import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
+
+async function loadGoogleFont(font: string, text: string) {
+  const url = `https://fonts.googleapis.com/css2?family=${font}&text=${encodeURIComponent(
+    text
+  )}`;
+  const css = await (await fetch(url)).text();
+  const resource = css.match(
+    /src: url\((.+)\) format\('(opentype|truetype)'\)/
+  );
+
+  if (resource) {
+    const response = await fetch(resource[1]);
+    if (response.status == 200) {
+      return await response.arrayBuffer();
+    }
+  }
+
+  throw new Error("failed to load font data");
+}
 
 export async function GET(request: Request) {
   try {
@@ -10,7 +28,7 @@ export async function GET(request: Request) {
     const title = searchParams.get("title");
 
     const text = title ?? "Lucas de Castro";
-    const fontData = await loadGoogleFont("Geist+Mono", text);
+    const fontData = await loadGoogleFont("Geist", text);
 
     return new ImageResponse(
       (
@@ -27,7 +45,7 @@ export async function GET(request: Request) {
               radial-gradient(circle at 50% 0%, rgba(14,165,233,0.12) 0%, transparent 50%),
               radial-gradient(circle at 50% 100%, rgba(14,165,233,0.12) 0%, transparent 50%)
             `,
-            fontFamily: "Geist Mono",
+            fontFamily: "Geist",
             padding: "60px",
             position: "relative",
           }}
@@ -122,7 +140,7 @@ export async function GET(request: Request) {
         height: 600,
         fonts: [
           {
-            name: "Geist Mono",
+            name: "Geist",
             data: fontData,
             style: "normal",
           },
