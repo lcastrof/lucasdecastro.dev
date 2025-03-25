@@ -51,10 +51,8 @@ npm run dev
 
 ## 🔜 Future Improvements
 
-- [ ] Add blog section
 - [ ] Add RSS feed
 - [ ] Add search functionality
-- [ ] Add projects showcase
 - [ ] Add contact form
 
 ## 🤝 Contributing
