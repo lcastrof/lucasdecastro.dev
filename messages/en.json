@@ -1,7 +1,7 @@
 {
   "Home": {
     "job-title": "Software Engineer",
-    "description": "Building software and learning new things every day. Currently working at <a>RD Station</a>."
+    "description": "Building software and learning every day. Currently working at <a>RD Station</a>."
   },
   "Navbar": {
     "about": "About",
@@ -13,8 +13,8 @@
     "subtitle": "Hey there! 👋",
     "paragraphs": {
       "p1": "I'm a <bold>software engineer</bold> passionate about designing and building <bold>scalable, high-performance systems</bold>. My focus is on <bold>backend development</bold>, <bold>software architecture</bold>, and <bold>distributed systems</bold>, with a growing interest in <bold>cloud infrastructure</bold>, which I'm actively exploring right now.",
-      "p2": "I'm always learning—whether it's diving into new <bold>architectural patterns</bold>, optimizing <bold>performance</bold>, or experimenting with personal projects. When I step away from the keyboard, you'll likely find me working out, playing video games, or spending time with my dogs.",
-      "p3": "This website is my space to share what I learn, document my journey, and contribute to the tech community. I believe in <bold>learning in public</bold>—writing about experiences, challenges, and insights not only helps me solidify knowledge but also creates opportunities for meaningful discussions and collaboration."
+      "p2": "I'm always learning, whether it's diving into new <bold>architectural patterns</bold>, optimizing <bold>performance</bold>, or experimenting with personal projects. When I step away from the keyboard, you'll likely find me working out, playing video games, or spending time with my dogs.",
+      "p3": "This website is my space to share what I learn, document my journey, and contribute to the tech community. I believe in <bold>learning in public</bold>, writing about experiences, challenges, and insights not only helps me solidify knowledge but also creates opportunities for meaningful discussions and collaboration."
     },
     "ending-message": "Let’s build something great together! 🚀"
   },
