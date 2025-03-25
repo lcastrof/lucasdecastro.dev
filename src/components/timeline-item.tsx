@@ -42,7 +42,7 @@ export function TimelineItem({
         className="flex-1 p-4 rounded-lg border border-transparent transition-all duration-200 
           hover:border-zinc-700/50 hover:bg-zinc-800/30"
       >
-        <h3 className="text-xl font-medium text-zinc-200">
+        <h3 className="text-xl font-medium text-zinc-100">
           {t(`roles.${experience.translationKey}.title`)}
         </h3>
         <p className="text-sm lg:text-base text-zinc-400">

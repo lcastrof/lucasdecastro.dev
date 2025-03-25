@@ -22,10 +22,10 @@ export default function Home() {
   return (
     <div className="flex flex-col gap-2 justify-center font-[family-name:var(--font-geist-sans)] flex-full">
       <div>
-        <h1 className="text-6xl text-gray-200">Lucas de Castro</h1>
-        <p className="text-4xl text-gray-500">{t("job-title")}</p>
+        <h1 className="md:text-6xl text-4xl text-slate-100">Lucas de Castro</h1>
+        <p className="md:text-4xl text-2xl text-slate-400">{t("job-title")}</p>
       </div>
-      <p className="text-xl max-w-prose">
+      <p className="md:text-xl text-lg max-w-prose">
         {t.rich("description", {
           a: (children) => (
             <a

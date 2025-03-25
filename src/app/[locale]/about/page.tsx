@@ -28,14 +28,14 @@ export default function About() {
 
       <article className="flex flex-col">
         {Array.from({ length: 3 }).map((_, i) => (
-          <p key={i}>
+          <p key={i} className="text-zinc-300">
             {t.rich(`paragraphs.p${i + 1}`, {
               bold: (children) => <strong>{children}</strong>,
             })}
           </p>
         ))}
 
-        <p>{t("ending-message")}</p>
+        <p className="text-zinc-300">{t("ending-message")}</p>
       </article>
     </PageContainer>
   );

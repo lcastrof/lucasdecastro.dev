@@ -1,7 +1,7 @@
 {
   "Home": {
     "job-title": "Engenheiro de Software",
-    "description": "Construindo software incrível e aprendendo coisas novas todos os dias. Atualmente trabalhando na <a>RD Station</a>."
+    "description": "Construindo software e aprendendo coisas novas todos os dias. Atualmente trabalhando na <a>RD Station</a>."
   },
   "Navbar": {
     "about": "Sobre",
@@ -13,7 +13,7 @@
     "subtitle": "Olá! 👋",
     "paragraphs": {
       "p1": "Sou um <bold>engenheiro de software</bold> motivado por projetar e desenvolver sistemas <bold>escaláveis</bold> e de <bold>alto desempenho</bold>. Meu foco está no <bold>desenvolvimento backend</bold>, <bold>arquitetura de software</bold> e <bold>sistemas distribuídos</bold>, além de estar me aprofundando em <bold>infraestrutura em nuvem</bold> atualmente.",
-      "p2": "Fora do mundo da programação, estou sempre aprendendo algo novo. Quando não estou estudando ou desenvolvendo projetos, provavelmente estou treinando, jogando videogame ou aproveitando o tempo com meus cachorros.",
+      "p2": "Estou sempre em busca de <bold>novos aprendizados</bold>, seja explorando novos <bold>padrões arquiteturais</bold>, otimizando <bold>performance</bold> ou testando ideias em <bold>projetos pessoais</bold>. Mas quando me afasto do teclado, é hora de recarregar as energias, treinando, jogando videogame ou aproveitando o tempo com meus cachorros.",
       "p3": "Criei este site para compartilhar o que aprendo, documentar minha trajetória e contribuir com a comunidade de tecnologia. Acredito no conceito de <bold>aprender em público</bold>—escrever sobre desafios e descobertas não só me ajuda a consolidar conhecimentos, mas também abre espaço para discussões e colaborações valiosas."
     },
     "ending-message": "Vamos construir algo incrível juntos! 🚀"
@@ -39,7 +39,9 @@
   },
   "Blog": {
     "subtitle": "Aqui você pode conferir alguns dos meus pensamentos, experiências e aprendizados.",
-    "minutes-to-read": "min de leitura"
+    "minutes-to-read": "min de leitura",
+    "under-construction": "Blog Em Construção",
+    "cooking-articles": "Estou preparando alguns artigos interessantes sobre desenvolvimento de software, arquitetura e minhas experiências. Em breve!"
   },
   "Projects": {
     "subtitle": "Aqui você pode encontrar alguns dos meus projetos pessoais.",
