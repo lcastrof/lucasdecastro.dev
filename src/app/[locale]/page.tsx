@@ -21,15 +21,22 @@ export default function Home() {
 
   return (
     <div className="flex flex-col gap-2 justify-center font-[family-name:var(--font-geist-sans)] flex-full">
-      <div>
-        <h1 className="md:text-6xl text-4xl text-slate-100">Lucas de Castro</h1>
-        <p className="md:text-4xl text-2xl text-slate-400">{t("job-title")}</p>
+      <div className="relative">
+        <div className="absolute inset-0 blur-3xl bg-sky-500/10 animate-pulse rounded-full" />
+        <div className="relative">
+          <h1 className="md:text-6xl text-4xl text-slate-100 relative">
+            Lucas de Castro
+          </h1>
+          <p className="md:text-4xl text-2xl text-slate-400">
+            {t("job-title")}
+          </p>
+        </div>
       </div>
-      <p className="md:text-xl text-lg max-w-prose">
+      <p className="md:text-xl text-lg max-w-prose relative">
         {t.rich("description", {
           a: (children) => (
             <a
-              className="text-sky-500 hover:underline"
+              className="text-sky-500 hover:underline relative"
               target="_blank"
               referrerPolicy="no-referrer"
               href="https://rdstation.com/"
