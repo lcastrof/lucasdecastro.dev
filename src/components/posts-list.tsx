@@ -1,6 +1,7 @@
 import { BlogPost } from "@/types/blog";
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import Link from "next/link";
+import { LuFlame } from "react-icons/lu";
 
 interface PostsListProps {
   posts: BlogPost[];
@@ -8,6 +9,7 @@ interface PostsListProps {
 
 export function PostsList({ posts }: PostsListProps) {
   const locale = useLocale();
+  const t = useTranslations("Blog");
 
   const formatDate = (date: string) => {
     return new Intl.DateTimeFormat(locale, {
@@ -17,6 +19,24 @@ export function PostsList({ posts }: PostsListProps) {
       timeZone: "UTC",
     }).format(new Date(date));
   };
+
+  // for now, say it is under construction
+  return (
+    <div className="flex flex-col items-center justify-center min-h-[400px] p-8">
+      <div className="flex flex-col items-center gap-6 text-center">
+        <div className="relative">
+          <LuFlame className="w-12 h-12 text-sky-500" />
+          <div className="absolute inset-0 blur-xl bg-sky-500/20 animate-pulse" />
+        </div>
+        <div className="space-y-2">
+          <h2 className="text-xl font-medium text-zinc-100">
+            {t("under-construction")}
+          </h2>
+          <p className="text-zinc-400 max-w-[500px]">{t("cooking-articles")}</p>
+        </div>
+      </div>
+    </div>
+  );
 
   return (
     <div>
