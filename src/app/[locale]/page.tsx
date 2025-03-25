@@ -44,6 +44,7 @@ export default function Home() {
               {children}
             </a>
           ),
+          br: () => <br className="hidden md:block" />,
         })}
       </p>
     </div>
