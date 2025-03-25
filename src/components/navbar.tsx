@@ -12,7 +12,7 @@ export function Navbar() {
   const t = useTranslations("Navbar");
 
   return (
-    <div className="flex flex-col sm:flex-row justify-between mb-12 gap-6 sm:gap-0">
+    <div className="flex flex-col sm:flex-row justify-between mb-12 gap-6 sm:gap-0 md:items-center">
       <div className="flex justify-between items-center">
         <Link locale={locale} href={`/${locale}`}>
           <Image src={LogoImg} alt="Avatar" width={48} height={48} />
