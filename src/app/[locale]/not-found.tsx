@@ -9,6 +9,7 @@ export default function NotFound() {
       <h1 className="text-6xl font-bold text-zinc-100">404</h1>
       <p className="text-xl text-zinc-400 max-w-md">{t("message")}</p>
       <Link
+        prefetch={true}
         href="/"
         className="text-blue-400 hover:text-blue-300 transition-colors"
       >

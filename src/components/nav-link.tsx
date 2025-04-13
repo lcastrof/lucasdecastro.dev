@@ -12,7 +12,7 @@ export function NavLink({
   const isSelected = path.includes(href);
 
   return (
-    <Link href={href} className="relative group">
+    <Link href={href} prefetch={true} className="relative group">
       <span
         className={`before:content-[''] before:absolute before:bottom-0 before:left-0 before:h-0.5 before:w-full before:bg-gray-200 before:transition-transform before:duration-300 before:ease-in-out ${
           isSelected

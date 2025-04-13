@@ -42,6 +42,7 @@ export function PostsList({ posts }: PostsListProps) {
     <div>
       {posts.map((post) => (
         <Link
+          prefetch={true}
           key={post.slug}
           href={`/${locale}/blog/${post.slug}`}
           className="group block"
