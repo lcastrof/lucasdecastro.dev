@@ -9,9 +9,11 @@ import { notFound } from "next/navigation";
 import "./globals.css";
 
 export const dynamic = "force-static";
-export const revalidate = 86400; // 24 hours, adjust as needed
 
-type Params = Promise<{ locale: string }>;
+// Add generateStaticParams for static locale generation
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
+}
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
@@ -19,9 +21,9 @@ const geistMono = Geist_Mono({
 });
 
 export async function generateMetadata(props: {
-  params: Params;
+  params: { locale: string };
 }): Promise<Metadata> {
-  const { locale } = await props.params;
+  const { locale } = props.params;
   return {
     metadataBase: new URL("https://lucasdecastro.dev"),
     title: {
@@ -62,9 +64,11 @@ export default async function RootLayout({
   params,
 }: Readonly<{
   children: React.ReactNode;
-  params: Promise<{ locale: string }>;
+  params: { locale: string };
 }>) {
-  const { locale } = await params;
+  const { locale } = params;
+
+  // Validate locale
   if (!hasLocale(routing.locales, locale)) {
     notFound();
   }
@@ -72,7 +76,7 @@ export default async function RootLayout({
   const messages = await getMessages({ locale });
 
   return (
-    <html lang={locale}>
+    <html lang={locale} suppressHydrationWarning>
       <body className={`${geistMono.variable} antialiased font-mono`}>
         <NextIntlClientProvider messages={messages} locale={locale}>
           <div className="max-w-4xl mx-auto px-8 py-8 min-h-screen flex flex-col gap-4 lg:text-lg">
