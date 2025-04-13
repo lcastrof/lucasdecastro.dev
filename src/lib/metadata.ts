@@ -50,5 +50,8 @@ export async function generatePageMetadata({
     twitter: {
       card: "summary_large_image",
     },
+    other: {
+      "Cache-Control": "no-cache, no-store, must-revalidate",
+    },
   };
 }

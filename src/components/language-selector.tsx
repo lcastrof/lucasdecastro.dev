@@ -29,7 +29,7 @@ export function LanguageSelector() {
     const currentLocale = currentLang;
     const newPath = pathname.replace(`/${currentLocale}`, `/${newLocale}`);
 
-    router.push(newPath);
+    router.replace(newPath, { scroll: false });
   };
 
   return (
