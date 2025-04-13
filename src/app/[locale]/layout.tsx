@@ -7,6 +7,13 @@ import { Geist_Mono } from "next/font/google";
 import { notFound } from "next/navigation";
 import "./globals.css";
 
+export const dynamic = "force-static";
+export const revalidate = false;
+export const fetchCache = "force-cache";
+export const runtime = "nodejs";
+export const preferredRegion = "home";
+export const maxDuration = 8; // seconds
+
 type Params = Promise<{ locale: string }>;
 
 const geistMono = Geist_Mono({
